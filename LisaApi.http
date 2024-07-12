@@ -1,0 +1,6 @@
+@LisaApi_HostAddress = http://localhost:5091
+
+GET {{LisaApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

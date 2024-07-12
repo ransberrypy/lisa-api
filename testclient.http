@@ -1,0 +1,57 @@
+@BASEURL = http://localhost:5091/api
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlJhbnNiZW4iLCJuYmYiOjE3MTk3MzIyMzIsImV4cCI6MTcxOTkwNTAzMiwiaWF0IjoxNzE5NzMyMjMyLCJpc3MiOiJib3hmcmFtZXRlY2guY29tIiwiYXVkIjoibGlzYUFwaS5jb20ifQ.x8OIkpM2Z6J7qU_y94dKGM9zen2smatxCrzOBq6W600
+
+### GET ALL PROPERTIES
+GET {{BASEURL}}/Property
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### GET A SINGLE PROPERTY BY ID
+GET {{BASEURL}}/property/4
+Content-Type: application/json
+
+
+### CREATE OR POST A PROPERTY
+POST {{BASEURL}}/property
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Store 29",
+    "price": 700,
+    "meterNumber": "P01294032",
+    "meterImg": "string baby file",
+    "address": "14 Baatsonaa Highway",
+    "type": 2,
+    "rentalStatus": 0
+}
+
+### DELETING A PROPERTY
+DELETE {{BASEURL}}/property/4
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### AUTHENTICATIION
+
+##LOGIN
+POST {{BASEURL}}/auth/login
+Content-Type: application/json
+
+{
+    "username": "Ransben",
+    "password": "Pie=22/7"
+}
+
+
+###SIGNUP  
+POST {{BASEURL}}/auth/signup
+Content-Type: application/json
+
+{
+    "username": "Ransben",
+    "email":"ransberrypy",
+    "phoneNumber":"0547050720",
+    "password": "Pie=22/7"
+}
+
